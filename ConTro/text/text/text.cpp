@@ -33,7 +33,7 @@ void ThemNodeVaoDau(node*& head, node* p)
     }
 }
 
-void ThemVaoCuoi(node*& head, node* p)
+void ThemVaoCuoi(node* &head, node* p)
 {
     if (head == NULL)
     {
@@ -42,11 +42,11 @@ void ThemVaoCuoi(node*& head, node* p)
     else
     {
         node* temp = head;
-        while (p->next == NULL)
+        while (temp->next != NULL)
         {
             temp = temp->next;
-            temp->next = p;
         }
+        temp->next = p;
     }
 }
 
@@ -55,7 +55,7 @@ void Xuat(node* head)
     node* temp = head;
     while (temp != NULL)
     {
-        cout << temp->data;
+        cout << "\t" << temp->data;
         temp = temp->next;
     }
 }
@@ -64,28 +64,31 @@ void xuat(node* head)
 {
     for (node* i = head; i != NULL; i = i->next)
     {
-        cout << i->data << " ";
+        cout << i->data << "\t";
     }
 }
 
+
 int main()
 {
-   // node* head = new node;
+    node* head = NULL;
     int n;
     cout << "\n nhap so luong node can them: ";
     cin >> n;
+    int x;
     for (int i = 0; i < n; i++)
     {
-        int x;
         cout << "\n nhap gia tri so nguyen: ";
         cin >> x;
-        node* head = new node;
         node* p = TaoNode(x);
-        ThemNodeVaoDau(head, p);
-        cout << "\ndanh sach lien ket don";
-        Xuat(head);
+        cout << p->data;
+        //ThemNodeVaoDau(head, p);
+        ThemVaoCuoi(head, p);
     }
-    //cout << "\ndanh sach lien ket don";
-    //Xuat(head);
+    
+    
+    cout << "\ndanh sach lien ket don";
+    Xuat(head);
+    return 0;
 }
 
