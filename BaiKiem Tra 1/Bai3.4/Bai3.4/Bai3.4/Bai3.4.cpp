@@ -53,6 +53,24 @@ void GhiCacDayConTangDan(FILE*p,int a[], int n)
     
 }
 
+void GhiCacDayConTangDan(int a[], int n)
+{
+
+    for (int i = 0; i < n; i++)
+    {
+        if (a[i] <= a[i + 1])
+        {
+            cout << a[i];
+            
+        }
+        else
+        {
+            cout << a[i] << endl;
+            
+
+        }
+    }
+}
 int main()
 {
     int a[100];

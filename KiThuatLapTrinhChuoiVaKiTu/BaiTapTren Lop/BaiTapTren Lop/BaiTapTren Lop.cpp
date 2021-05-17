@@ -163,15 +163,31 @@ void XoaKhoangTrangCuoi(char*& s)
 {
 	while (s[strlen(s)-1] == ' ')
 	{
-		
+		s[strlen(s) - 1] == '\0 ';
+	}
+}
+
+void XoaKhoangTrangGiua(char* &s)
+{
+	char* p;
+	p = strstr(s, "  ");
+	while (p!=NULL)
+	{
+		strcpy(s, p + 1);
+		p = strstr(s, "  ");
 	}
 }
 
 int main()
 {
 	char* s = new char[100];
-	//cout << "\n Nhap chuoi: ";
+	cout << "\n Nhap chuoi: ";
 	fgets(s, 100, stdin);
-	XoaKhoangTrangDau(s);
-	cout << s;
+	puts(s);
+	//cout << s;
+	//char* s1 = new char[100];
+	//fflush(stdin);
+	//gets(s1); //nhap 1 chuoi
+	//puts(s1);
 }
+  
