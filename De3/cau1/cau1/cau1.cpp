@@ -23,21 +23,23 @@ double X(int n)
 	return s + 5 * n + 2019;
 }
 
-void xoa1vitrik(int a[], int n)
+/*void xoa1vitrik(int a[], int n)
 
 {
 
 	int k;
 
-	printf("nhap vi tri can xoa: ");
+	cout<<"nhap vi tri can xoa: ";
 
-	scanf("%d", &k);
+	cin >> k;
 
 	for (int i = 0; i < n; i++)
-
+	{
 		a[k] = a[k + 1];
 
-	n = n - 1;
+		n = n - 1;
+	}
+}*/
 int main()
 {
 	int n;

@@ -15,6 +15,7 @@ void DocFile(int a[], int& n)
 			fscanf(p, "%d", &a[n]);
 			n++;
 		}
+		cout << n;
 		fclose(p);
 }
 
@@ -36,6 +37,7 @@ void SapXep(FILE* p,int a[], int n)
 	for (int i = 1; i < n; i++)
 	{
 		fprintf(p, "%d\t", a[i]);
+		cout << "\t" << a[i];
 	}
 }
 
@@ -44,6 +46,7 @@ int main()
 	int a[100], n;
 	DocFile(a, n);
 	FILE* p = fopen("mang.out", "w");
+	cout << endl;
 	SapXep(p,a, n);
 	fclose(p);
 }

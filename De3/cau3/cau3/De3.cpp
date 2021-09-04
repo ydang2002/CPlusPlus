@@ -1,4 +1,8 @@
-
+﻿/*vĐọc 1 tập tin có cấu trúc như sau:
++Dòng đầu ghi số n.
++Trong các dòng tiếp theo ghi n số; các số cách nhau ít nhất một khoảng trắng.
+a. Tìm tất cả các số nguyên tố và ghi các giá trị tìm được vào tập tin tên “soNT.out”.
+b. Xóa phần tử có giá trị k trong mảng.*/
 
 #define _CRT_SECURE_NO_WARNINGS
 #include <iostream>

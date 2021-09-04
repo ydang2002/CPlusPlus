@@ -1,4 +1,16 @@
-﻿#include <iostream>
+﻿/*Danh sách liên kết đơn (DSLK) là một trong những cấu trúc dữ liệu thường được dùng để lưu
+trữ và xử lý một tập các đối tượng mà số lượng các đối tượng không được xác định trước.
+a. Xem mỗi đối tượng như là một số nguyên (có giá trị là một số nguyên), hãy định nghĩa (khai
+báo) cấu trúc dữ liệu danh sách liên kết đơn LIST (trong C/C++) và viết giải thuật để chèn một
+đối tượng có giá trị k vào đầu của DSLK.
+b. Viết một giải thuật để chèn một đối tượng có giá trị k vào cuối DSLK. Tính độ phức tạp của
+giải thuật đã viết.
+c. Giả sử các đối tượng trong DSLK có giá trị đôi một khác nhau, hãy viết một giải thuật để
+tìm nút lưu trữ đối tượng có giá trị chẵn lớn nhất trong DSLK.
+d. Giả sử các đối tượng trong DSLK có giá trị đôi một khác nhau, hãy viết một giải thuật để tìm
+nút trong DSLK mà lưu trữ đối tượng có giá trị nhỏ nhất lớn hơn một giá trị k nguyên cho
+trước.*/
+#include <iostream>
 using namespace std;
 
 struct node
@@ -90,6 +102,43 @@ int TimMax(list l)
     }
     return max;
 }
+
+//vode* Find_maxNode(node* head)
+//{
+//    int max = head->data;
+//    node* maxNode = head;
+//    node* temp = head;
+//    while (temp != NULL)
+//    {
+//        if (temp->data > max)
+//        {
+//            max = temp->data;
+//            maxNode = temp;
+//        }
+//        temp = temp->next;
+//    }
+//    return maxNode;
+//}
+//
+//node* timmaxchan(linkedlist* l)
+//{
+//    node* temp = new node;
+//    node* f = l->head;
+//    int max = -1;
+//    while (f != NULL)
+//    {
+//        if (f->data % 2 == 0)
+//        {
+//            if (f->data > max)
+//            {
+//                max = f->data;
+//                temp->data = f->data;
+//            }
+//        }
+//        f = f->next;
+//    }
+//    return temp;
+//}
 
 void TimMaxChan(list l)
 {

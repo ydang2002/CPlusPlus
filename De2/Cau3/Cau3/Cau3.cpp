@@ -8,7 +8,7 @@ tương ứng với yêu cầu bài toán.*/
 
 #define _CRT_SECURE_NO_WARNINGS
 #include <iostream>
-#define MIN -10000
+//#define MIN -10000
 using namespace std;
 
 void DocMang(int a[], int& n)
@@ -20,7 +20,7 @@ void DocMang(int a[], int& n)
         fscanf(F, "%d", &n);
         cout << n << endl;
         //day cac phan tu trong mang
-        //int* a = new int[n];
+       //a = new int[n];
         for (int i = 0; i < n; i++)
         {
             fscanf(F, "%d\t", &a[i]);
@@ -36,7 +36,7 @@ void DocMang(int a[], int& n)
 
 void TimMAX(FILE* F,int n, int a[])
 {
-    int Max = MIN;
+    int Max = a[0];
     for (int i = 0; i < n; i++)
     {
         if (a[i] > Max)

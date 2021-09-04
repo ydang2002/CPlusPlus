@@ -5,7 +5,7 @@
 using namespace std;
 
 //tach ki tu ben trai
-void TachTrai(char* s)
+char * TachTrai(char* s)
 {
 	for (int i = 0; i < strlen(s); i++)
 	{
@@ -14,6 +14,7 @@ void TachTrai(char* s)
 			s[i] = '\0';
 		}
 	}
+	return s;
 }
 
 
@@ -183,7 +184,8 @@ int main()
 	char* s = new char[100];
 	cout << "\n Nhap chuoi: ";
 	fgets(s, 100, stdin);
-	puts(s);
+	cout<<"\n ket qua: "<<TachTrai(s);
+	//puts(s);
 	//cout << s;
 	//char* s1 = new char[100];
 	//fflush(stdin);

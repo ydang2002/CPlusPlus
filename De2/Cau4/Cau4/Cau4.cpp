@@ -96,11 +96,11 @@ int timHCNMax(FILE *F,int a[100][100], int m, int n, int& toado_x, int& toado_y)
     fprintf(F, "%d  \n", max);
     fprintf(F, "%d  ", a[toado_x - 1][toado_y - 1]);
     fprintf(F, "%d  ", a[toado_x - 1][toado_y]);
-    fprintf(F, "%d  ", a[toado_x ][toado_y + 1]);
-    fprintf(F, "%d  ", a[toado_x ][toado_y - 1]);
+    fprintf(F, "%d  ", a[toado_x - 1][toado_y + 1]);
+    fprintf(F, "\n%d  ", a[toado_x ][toado_y - 1]);
     fprintf(F, "%d  ", a[toado_x ][toado_y]);
     fprintf(F, "%d  ", a[toado_x ][toado_y + 1]);
-    fprintf(F, "%d  ", a[toado_x + 1][toado_y - 1]);
+    fprintf(F, "\n%d  ", a[toado_x + 1][toado_y - 1]);
     fprintf(F, "%d  ", a[toado_x + 1][toado_y]);
     fprintf(F, "%d  ", a[toado_x + 1][toado_y + 1]);
     return max;

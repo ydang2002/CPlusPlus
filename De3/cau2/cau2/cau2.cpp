@@ -29,7 +29,7 @@ void DocDanhSachSV(list sv[], int& n)
     {
         cout << "khong ton tai danh sach sinh vien ";
     }
-    else
+    else 
     {
         while (!feof(F))
         {
@@ -48,7 +48,7 @@ void swap(char x, char y)
     x = y;
     y = temp;
 }
-
+//strcmp dùng để so sánh chuỗi
 void Sapxep(list sv[], int n)
 {
     for (int i = 0; i < n - 1; i++)

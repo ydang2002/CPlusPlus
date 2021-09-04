@@ -40,15 +40,15 @@ int TinhAn(int n)
     }
     else
     {
-        return 24 * (n - 1) + 25 * (n - 2) + 10 * (n - 3) + 2018;
+        return 24 * TinhAn(n - 1) + 25 * TinhAn(n - 2) + 10 * TinhAn(n - 3) + 2018;
     }
 }
 
 int TinhAnKhongDeQuy(int n)
 {
-    int a = 1;
-    int b = 2;
-    int c = 3;
+    int A1 = 1;
+    int A2 = 2;
+    int A3 = 3;
     int k;
     if (n<=3)
     {
@@ -58,10 +58,10 @@ int TinhAnKhongDeQuy(int n)
     {
         for (int i = 4; i <= n; i++)
         {
-            k = 24 * c + 25 * b + 10 * a + 2018;
-            a = b;
-            b = c;
-            c = k;
+            k = 24 * A3 + 25 * A2 + 10 * A1 + 2018;
+            A1 = A2;
+            A2 = A3;
+            A3 = k;
         }
         return k;
     }
@@ -74,6 +74,6 @@ int main()
     cout << "\nNhap n: ";
     cin >> n;
     
-     cout<< TinhAnKhongDeQuy(n);
+     cout<< TinhAn(n);
 }
 

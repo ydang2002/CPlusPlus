@@ -141,6 +141,12 @@
   <ItemGroup>
     <ClCompile Include="Cau3.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <Text Include="inp.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="mang.out" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
